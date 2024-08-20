@@ -15,16 +15,14 @@ import os
 from selenium.common.exceptions import ElementNotInteractableException
 
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
-from pyvirtualdisplay import Display
+
 import undetected_chromedriver as uc
 
 def init_driver():
     options = uc.ChromeOptions()
     # Add your desired options here
-    display = Display(visible=0, size=(1920, 1080))
-    display.start()
     driver = uc.Chrome(options=options)
-    return driver,display
+    return driver
 
 def slow_type(element, text):
     """Teebet aaleha el function hethi to get the most human like typing for bots take good care of it"""
