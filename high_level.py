@@ -67,7 +67,7 @@ def process_emails(email_list, driver):
                 
                 wait_and_click_xpath(driver, Xpath_list["RESET_PASSWORD_XPATH"])
                 time.sleep(2)  
-                take_screenshot(driver,email)
+                
                 status = check_status(driver)
                 
                 if status == "exists":
