@@ -22,3 +22,8 @@ sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
 ## Step 6: Run the Project
 python3 main.py
+
+## Config: 
+test.txt contains emails 
+result.csv is actual result
+config file can change higher wait times ( for bad internet times)
