@@ -16,4 +16,3 @@ results = process_emails(email_list, driver)
 
 write_results_to_csv(results, output_file)
 
-time.sleep(500)
