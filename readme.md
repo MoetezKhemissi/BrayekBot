@@ -27,3 +27,5 @@ python3 main.py
 test.txt contains emails 
 result.csv is actual result
 config file can change higher wait times ( for bad internet times)
+## Ps: 
+some lines will be duplicated with unkown then found/not found ignore it for now too lazy to make post-process script to remove these dupes
