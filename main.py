@@ -5,7 +5,7 @@ import time
 
 
 email_list = read_email_list(EMAIL_FILE)
-driver = init_driver()
+driver,display = init_driver()
 driver.get(BASE_URL)
 wait_and_click_xpath(driver, Xpath_list["CONSENT_COOKIE"])
 
