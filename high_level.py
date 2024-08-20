@@ -84,11 +84,15 @@ def process_emails(email_list, driver):
 
             except Exception as e:
                 print(f"Error encountered: {e}. Restarting driver...")
-                driver.quit()  # Close the current driver instance
-                time.sleep(2)  # Short pause before restarting
-                driver = init_driver()  # Restart the driver
-                driver.get(BASE_URL)
-                wait_and_click_xpath(driver, Xpath_list["CONSENT_COOKIE"])
+                try:
+                    driver.quit()  # Close the current driver instance
+                    time.sleep(2)  # Short pause before restarting
+                    driver = init_driver()  # Restart the driver
+                    time.sleep(10)
+                    driver.get(BASE_URL)
+                    wait_and_click_xpath(driver, Xpath_list["CONSENT_COOKIE"])
+                except:
+                    print("couldn't restart driver")
                 attempt += 1  # Increment attempt counter
 
     return results
